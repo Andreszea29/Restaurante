@@ -85,3 +85,6 @@ form {
     display: flex;
     justify-content: space-between;
 }
+.navbar{
+width: 100%; 
+}
