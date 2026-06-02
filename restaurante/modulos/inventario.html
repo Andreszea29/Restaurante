@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Producto</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/restaurante/css/inventario.css">
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            LO MAS RICO
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">Home</a>
+            <a class="navbar-item">Documentation</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">More</a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">About</a>
+                    <a class="navbar-item is-selected">Jobs</a>
+                    <a class="navbar-item">Contact</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">Report an issue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/restaurante/index.html" class="button" id="botonregre">Regresar a la página principal</a>
+</nav>
+
+  <div id="contenedor">
+    <center><h1 id="titulo">Registro de Producto</h1></center>
+
+    <form id="formulario">
+
+<center> 
+      <label id="etiqueta" for="codigo_producto">
+        Código del Producto:
+      </label><br>
+      <input id="codigo_producto" type="text" id="codigo_producto" name="codigo_producto">
+      <br><br>
+
+      <label id="nombre_producto" for="nombre_producto">
+        Nombre del Producto:
+      </label><br>
+      <input id="nombre_producto" type="text" id="nombre_producto" name="nombre_producto">
+      <br><br>
+
+      <label id="etiqueta" for="precio_unitario">
+        Precio Unitario:
+      </label><br>
+      <input id="precio_unitario" type="number" id="precio_unitario" name="precio_unitario">
+      <br><br>
+
+      <label id="etiqueta" for="cantidad_producto">
+        Cantidad del Producto:
+      </label><br>
+      <input id="cantidad_producto" type="number" id="cantidad_producto" name="cantidad_producto">
+      <br><br>
+
+      <label id="etiqueta" for="marca_producto">
+        Marca del Producto:
+      </label><br>
+      <input id="marca_producto" type="text" id="marca_producto" name="marca_producto">
+      <br><br>
+
+      <label id="etiqueta" for="categoria_producto">
+        Categoría del Producto:
+      </label><br>
+      <input id="categoria_producto" type="text" id="categoria_producto" name="categoria_producto">
+      <br><br>
+
+      <label id="etiqueta" for="unidad_medida">
+        Unidad de Medida:
+      </label><br>
+      <input id="unidad_medida" type="text" id="unidad_medida" name="unidad_medida">
+      <br><br>
+
+      <button id="boton" type="submit">
+        Guardar Producto
+      </button>
+</center>
+    </form>
+</div>
+<script src="/restaurante/javascript/inventario.js"></script>
+</body>
+</html>
