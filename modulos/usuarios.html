@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="../css/usuarios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            LO MAS RICO
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">Home</a>
+            <a class="navbar-item">Documentation</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">More</a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">About</a>
+                    <a class="navbar-item is-selected">Jobs</a>
+                    <a class="navbar-item">Contact</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">Report an issue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/restaurante/index.html" class="button" id="botonregre">Regresar a la página principal</a>
+</nav>
+<form>
+
+<!-- Nombre completo -->
+<div class="field">
+  <label class="label">Nombre completo</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Ingrese su nombre completo" required>
+  </div>
+</div>
+
+<!-- Email -->
+<div class="field">
+  <label class="label">Email</label>
+  <div class="control">
+    <input class="input" type="email" placeholder="Ingrese su email" required>
+  </div>
+</div>
+
+<!-- Número celular -->
+<div class="field">
+  <label class="label">Número celular</label>
+  <div class="control">
+    <input class="input" type="tel" placeholder="Ingrese su número celular" required>
+  </div>
+</div>
+
+<!-- Género -->
+<div class="field">
+  <label class="label">Género</label>
+  <div class="control">
+    <div class="select">
+      <select required>
+        <option value="">Seleccione su género</option>
+        <option>Masculino</option>
+        <option>Femenino</option>
+        <option>Otro</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- Fecha de nacimiento -->
+<div class="field">
+  <label class="label">Fecha de nacimiento</label>
+  <div class="control">
+    <input class="input" type="date" required>
+  </div>
+</div>
+
+<!-- Dirección -->
+<div class="field">
+  <label class="label">Dirección</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Ingrese su dirección" required>
+  </div>
+</div>
+
+<!-- Contraseña -->
+<div class="field">
+  <label class="label">Contraseña</label>
+  <div class="control">
+    <input class="input" type="password" placeholder="Ingrese su contraseña" required>
+  </div>
+</div>
+
+<!-- Botones -->
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" type="submit">Enviar</button>
+  </div>
+  <div class="control">
+    <button class="button is-light" type="reset">Cancelar</button>
+  </div>
+</div>
+
+</form>
+
+<hr>
+
+</body>
+</html>
