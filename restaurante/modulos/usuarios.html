@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../css/usuarios.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
+
 <body>
+
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item">
@@ -33,40 +35,48 @@
             </div>
         </div>
     </div>
-    <a href="/restaurante/index.html" class="button" id="botonregre">Regresar a la página principal</a>
+
+    <a href="/restaurante/index.html" class="button" id="botonregre">
+        Regresar a la página principal
+    </a>
 </nav>
+
+
 <form>
 
 <!-- Nombre completo -->
 <div class="field">
   <label class="label">Nombre completo</label>
   <div class="control">
-    <input id="input" type="text" placeholder="Ingrese su nombre completo" required>
+    <input class="input" type="text" id="nombre" placeholder="Ingrese su nombre completo" required>
   </div>
 </div>
+
 
 <!-- Email -->
 <div class="field">
   <label class="label">Email</label>
   <div class="control">
-    <input id="input" type="email" placeholder="Ingrese su email" required>
+    <input class="input" type="email" id="email" placeholder="Ingrese su email" required>
   </div>
 </div>
+
 
 <!-- Número celular -->
 <div class="field">
   <label class="label">Número celular</label>
   <div class="control">
-    <input id="input" type="tel" placeholder="Ingrese su número celular" required>
+    <input class="input" type="tel" id="celular" placeholder="Ingrese su número celular" required>
   </div>
 </div>
+
 
 <!-- Género -->
 <div class="field">
   <label class="label">Género</label>
   <div class="control">
     <div class="select">
-      <select required>
+      <select id="genero" required>
         <option value="">Seleccione su género</option>
         <option>Masculino</option>
         <option>Femenino</option>
@@ -76,42 +86,50 @@
   </div>
 </div>
 
+
 <!-- Fecha de nacimiento -->
 <div class="field">
   <label class="label">Fecha de nacimiento</label>
   <div class="control">
-    <input id="input" type="date" required>
+    <input class="input" type="date" id="fecha_nacimiento" required>
   </div>
 </div>
+
 
 <!-- Dirección -->
 <div class="field">
   <label class="label">Dirección</label>
   <div class="control">
-    <input id="input" type="text" placeholder="Ingrese su dirección" required>
+    <input class="input" type="text" id="direccion" placeholder="Ingrese su dirección" required>
   </div>
 </div>
+
 
 <!-- Contraseña -->
 <div class="field">
   <label class="label">Contraseña</label>
   <div class="control">
-    <input id="input" type="password" placeholder="Ingrese su contraseña" required>
+    <input class="input" type="password" id="contrasena" placeholder="Ingrese su contraseña" required>
   </div>
 </div>
+
 
 <!-- Botones -->
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link" type="submit">Enviar</button>
+    <button class="button is-link" type="button" onclick="validarDatos()">Enviar</button>
   </div>
+
   <div class="control">
     <button class="button is-light" type="reset">Cancelar</button>
   </div>
 </div>
 
 </form>
+
 <hr>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/restaurante/javascript/usuarios.js"></script>
 
 </body>
 </html>

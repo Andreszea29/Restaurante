@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/restaurante/css/pedidos.css">
 </head>
+
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item">
             LO MAS RICO
@@ -32,37 +35,46 @@
             </div>
         </div>
     </div>
-    <a href="/restaurante/index.html" class="button" id="botonregre">Regresar a la página principal</a>
+
+    <a href="/restaurante/index.html" class="button" id="botonregre">
+        Regresar a la página principal
+    </a>
 </nav>
+
+
 <form>
 
-  <div class="field">
+<div class="field">
     <label class="label">Nombre completo</label>
     <div class="control">
-      <input id="input" type="text" id="nombre" placeholder="Ingrese su nombre completo" required>
+      <input class="input" type="text" id="nombre" placeholder="Ingrese su nombre completo" required>
     </div>
 </div>
+
 
 <div class="field">
     <label class="label">Email</label>
     <div class="control">
-      <input id="input" type="email" id="email" placeholder="Ingrese su email" required>
+      <input class="input" type="email" id="email" placeholder="Ingrese su email" required>
     </div>
 </div>
+
 
 <div class="field">
     <label class="label">Número celular</label>
     <div class="control">
-      <input id="input" type="tel" id="telefono" placeholder="Ingrese su número celular" required>
+      <input class="input" type="tel" id="telefono" placeholder="Ingrese su número celular" required>
     </div>
 </div>
+
 
 <div class="field">
     <label class="label">Dirección</label>
     <div class="control">
-      <input id="input" type="text" id="direccion" placeholder="Ingrese su dirección" required>
+      <input class="input" type="text" id="direccion" placeholder="Ingrese su dirección" required>
     </div>
 </div>
+
 
 <div class="field">
   <label class="label">Método de pago</label>
@@ -80,75 +92,82 @@
   </div>
 </div>
 
+
 <div id="campos_pago" style="margin-top: 20px;"></div>
+
 
 <script>
 function mostrarCamposPago() {
+
   const metodo = document.getElementById("metodo_pago").value;
   const contenedor = document.getElementById("campos_pago");
 
   let html = "";
 
   if (metodo === "tarjeta") {
+
     html = `
       <div class="field">
         <label class="label">Número de tarjeta</label>
         <div class="control">
-          <input id="input" type="text" placeholder="1234 5678 9012 3456" required>
+          <input class="input" type="text" placeholder="1234 5678 9012 3456" required>
         </div>
       </div>
 
       <div class="field">
         <label class="label">Nombre del titular</label>
         <div class="control">
-          <input id="input" type="text" placeholder="Nombre completo" required>
+          <input class="input" type="text" placeholder="Nombre completo" required>
         </div>
       </div>
 
       <div class="field is-grouped">
         <div class="control is-expanded">
           <label class="label">Fecha de vencimiento</label>
-          <input id="input" type="text" placeholder="MM/AA" required>
+          <input class="input" type="text" placeholder="MM/AA" required>
         </div>
 
         <div class="control">
           <label class="label">CVV</label>
-          <input id="input" type="password" placeholder="123" required>
+          <input class="input" type="password" placeholder="123" required>
         </div>
       </div>
     `;
   }
 
   else if (metodo === "transferencia") {
+
     html = `
       <div class="field">
         <label class="label">Banco</label>
         <div class="control">
-          <input id="input" type="text" placeholder="Nombre del banco" required>
+          <input class="input" type="text" placeholder="Nombre del banco" required>
         </div>
       </div>
 
       <div class="field">
         <label class="label">Número de cuenta</label>
         <div class="control">
-          <input id="input" type="text" placeholder="Número de cuenta" required>
+          <input class="input" type="text" placeholder="Número de cuenta" required>
         </div>
       </div>
     `;
   }
 
   else if (metodo === "nequi" || metodo === "daviplata") {
+
     html = `
       <div class="field">
         <label class="label">Número de celular</label>
         <div class="control">
-          <input id="input" type="tel" placeholder="3001234567" required>
+          <input class="input" type="tel" placeholder="3001234567" required>
         </div>
       </div>
     `;
   }
 
   else if (metodo === "efectivo") {
+
     html = `
       <div class="notification is-info">
         El pago se realizará en efectivo al momento de la entrega.
@@ -160,30 +179,32 @@ function mostrarCamposPago() {
 }
 </script>
 
+
 <div class="field">
     <label class="label">Pedido</label>
     <div class="control">
-      <textarea id="descripcion" id="pedido" placeholder="Describa su pedido" required></textarea>
+      <textarea id="pedido" placeholder="Describa su pedido" required></textarea>
     </div>
 </div>
+
 
 <div class="field">
     <label class="label">Referencias</label>
     <div class="control">
-      <textarea id="referencias" id="referencias" placeholder="Ingrese referencias adicionales"></textarea>
+      <textarea id="referencias" placeholder="Ingrese referencias adicionales"></textarea>
     </div>
 </div>
 
+
+<!-- Botones -->
 <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link" type="submit">Enviar</button>
-    </div>
-    <div class="control">
-      <button class="button is-light" type="reset">Cancelar pedido</button>
-    </div>
-</div>
+  <div class="control">
+    <button class="button is-link" type="button" onclick="validarDatos()">Enviar</button>
+  </div>
+
 
 </form>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/restaurante/javascript/pedidos.js"></script>
 </body>
 </html>
