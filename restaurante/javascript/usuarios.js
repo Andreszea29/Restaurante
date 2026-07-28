@@ -19,7 +19,6 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+$/.test(nombre)) {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "El nombre debe contener solo letras",
             icon: "error"
@@ -28,7 +27,6 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "El correo electrónico no es válido",
             icon: "error"
@@ -37,7 +35,6 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (!/^\d{10}$/.test(celular)) {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "El celular debe contener exactamente 10 números",
             icon: "error"
@@ -46,7 +43,6 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+$/.test(genero)) {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "El género debe contener solo letras",
             icon: "error"
@@ -55,7 +51,6 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (fecha_nacimiento == "") {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "Debe seleccionar una fecha de nacimiento",
             icon: "error"
@@ -64,7 +59,6 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ0-9#.,\- ]+$/.test(direccion)) {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "La dirección contiene caracteres no válidos",
             icon: "error"
@@ -73,12 +67,28 @@ let contrasena = document.getElementById("contrasena").value;
     }
 
     if (contrasena.length < 8) {
-        console.log("Los datos ingresados son incorrectos");
         Swal.fire({
             title: "La contraseña debe tener mínimo 8 caracteres",
             icon: "error"
         });
         return;
     }
+
+    let usuario = {
+        nombre: nombre,
+        email: email,
+        celular: celular,
+        genero: genero,
+        fecha_nacimiento: fecha_nacimiento,
+        direccion: direccion,
+        contrasena: contrasena
+    };
+
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+
+    Swal.fire({
+        title: "Datos ingresados correctamente",
+        icon: "success"
+    });
 
 }

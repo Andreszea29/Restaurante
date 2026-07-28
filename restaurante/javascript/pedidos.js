@@ -45,5 +45,8 @@ let telefono = document.getElementById("telefono").value;
         });
         return;
     }
-
+    Swal.fire({
+        title: "Datos ingresados correctamente",
+        icon: "success"
+    });
 }
